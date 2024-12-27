@@ -109,21 +109,24 @@ public class Main {
 		
 		while(current!=null)
 		{
-			if (!ifinList(dummy, current.getValue())){
+			if (!ifinList(dummy2, current.getValue())){
 				dummy.setNext(new Node<Integer>(current.getValue()));
 				dummy =dummy.getNext();
 			}
 			current=current.getNext();
 		}
-		return dummy;
+		return dummy2.getNext();
 	}
 	 public static boolean ifinList (Node <Integer> head , int x) {//ex5
-	    	while(head!=null){
-	    		if (head.getValue()==x)
-	    			return true;
-	    		head= head.getNext();
-	    	} 
-	    	return false;
-	    
-	    }
+    	while(head!=null){
+    		if (head.getValue()==x)
+    			return true;
+    		head= head.getNext();
+    	} 
+    	return false;
+    
+	 }
+	 //public static int longestsorted (Node <Integer> head) {//ex6
+		 
+	 //}
  }
